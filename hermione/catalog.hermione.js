@@ -24,6 +24,11 @@ describe('Catalog', async () => {
         const cartBadge = await browser.$('.CartBadge');
 
         assert(cartBadge.isDisplayed());
+
+        // Отчистка корзины
+        await browser.url('/hw/store/cart');
+        const btnCart = await browser.$('.Cart-Clear');
+        await btnCart.click();
     });
 
     it('Увеличение числа товаров в корзине', async function({browser}) {
@@ -43,5 +48,10 @@ describe('Catalog', async () => {
         store = await browser.execute(() => JSON.parse(localStorage.getItem('example-store-cart')));
 
         assert(count + 1 === store['0']['count']);
+
+        // Отчистка корзины
+        await browser.url('/hw/store/cart');
+        const btnCart = await browser.$('.Cart-Clear');
+        await btnCart.click();
     });
 });

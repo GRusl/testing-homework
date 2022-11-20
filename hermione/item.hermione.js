@@ -27,5 +27,10 @@ describe('Item детально', async () => {
         const cartBadge = await browser.$('.CartBadge');
 
         assert(cartBadge.isDisplayed());
+
+        // Отчистка корзины
+        await browser.url('/hw/store/cart');
+        const btnCart = await browser.$('.Cart-Clear');
+        await btnCart.click();
     });
 });

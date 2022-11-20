@@ -4,8 +4,8 @@ import React from "react";
 import {describe, it, expect} from '@jest/globals'
 import {getAllByTestId, render} from '@testing-library/react'
 import {createStore} from "redux";
-import {ProductDetails} from "../../src/client/components/ProductDetails";
-import {Catalog} from "../../src/client/pages/Catalog";
+import {ProductDetails} from "../src/client/components/ProductDetails";
+import {Catalog} from "../src/client/pages/Catalog";
 
 const initial_state = {
     products: [

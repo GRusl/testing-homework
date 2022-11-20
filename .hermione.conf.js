@@ -7,12 +7,12 @@ module.exports = {
             desiredCapabilities: {
                 browserName: 'chrome'
             }
-        }
+        },
     },
 
     plugins: {
         'html-reporter/hermione': {
-            path: 'hermione-html-report'
+            path: 'hermione-html-report',
         }
     },
 

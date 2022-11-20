@@ -5,7 +5,7 @@
         "start": "nodemon ./src/server/index.ts",
         "test": "jest",
         "build": "webpack --mode=production --node-env=production",
-        "hermione": "hermione test/hermione/*",
+        "hermione": "hermione hermione/*",
         "watch": "webpack --watch"
     },
     "dependencies": {
